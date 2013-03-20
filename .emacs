@@ -60,15 +60,25 @@
 (setq default-terminal-coding-system 'utf-8-unix)
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM VARIABLES
+(custom-set-variables '(pc-selection-mode t nil (pc-select)))
+(custom-set-variables '(mouse-wheel-mode t nil (mwheel)))
+
+;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; JIRA CONFIG
 (custom-set-variables
   ;; custom-set-variables was added by Custom.
   ;; If you edit it by hand, you could mess it up, so be careful.
   ;; Your init file should contain only one such instance.
   ;; If there is more than one, they won't work right.
- '(jira-url "https://jira.dailymotion.com/rpc/xmlrpc")
+ '(jira-url "http://jiraurl/rpc/xmlrpc")
  '(mouse-wheel-mode t nil (mwheel))
  '(pc-selection-mode t nil (pc-select)))
 
+(custom-set-faces
+  ;; custom-set-faces was added by Custom.
+  ;; If you edit it by hand, you could mess it up, so be careful.
+  ;; Your init file should contain only one such instance.
+  ;; If there is more than one, they won't work right.
+ )
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; PHP SPECIFIC CONFIGURATION
 (add-hook 'php-mode-hook 'php-mode-config)
@@ -100,9 +110,4 @@
   (setq indent-tabs-mode nil
         tab-width 4
         c-basic-offset 4))
-(custom-set-faces
-  ;; custom-set-faces was added by Custom.
-  ;; If you edit it by hand, you could mess it up, so be careful.
-  ;; Your init file should contain only one such instance.
-  ;; If there is more than one, they won't work right.
- )
+
