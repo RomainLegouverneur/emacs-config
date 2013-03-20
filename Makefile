@@ -1,4 +1,4 @@
-install: nlinum auto-complete php-completion anything magit jira tramp vline colhighlight columnmarker
+install: nlinum auto-complete php-completion anything magit xmlrpc jira tramp vline colhighlight columnmarker
 
 nlinum:
 	wget http://elpa.gnu.org/packages/nlinum-1.1.el
@@ -16,6 +16,9 @@ anything:
 
 magit:
 	wget https://github.com/downloads/magit/magit/magit-1.2.0.tar.gz
+
+xmlrpc:
+	wget http://www.emacswiki.org/emacs/download/xml-rpc.el
 
 jira:
 	wget http://www.emacswiki.org/emacs/download/jira.el
