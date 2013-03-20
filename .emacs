@@ -15,6 +15,9 @@
 (require 'anything-match-plugin)
 (require 'magit)
 (require 'jira)
+(require 'vline)
+(require 'col-highlight)
+(require 'column-marker)
 (load "nlinum-1.1.el")
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; GENERAL CONFIGURATION
@@ -37,6 +40,8 @@
 
 (setq tramp-default-method "ssh")
 
+(toggle-highlight-column-when-idle t)
+
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;; CUSTOM VARIABLES
 (custom-set-variables '(pc-selection-mode t nil (pc-select)))
 (custom-set-variables '(mouse-wheel-mode t nil (mwheel)))
@@ -56,6 +61,16 @@
 	      (make-variable-buffer-local 'ac-sources)
 	      (add-to-list 'ac-sources 'ac-source-php-completion)
 	      (auto-complete-mode t))))
+
+(add-hook 'php-mode-hook
+	  (lambda ()
+	    (interactive)
+	    (column-marker-1 80)))
+
+(add-hook 'php-mode-hook
+	  (lambda ()
+	    (interactive)
+	    (column-marker-2 120)))
 
 (defun php-mode-config ()
   "My PHP mode configuration."
